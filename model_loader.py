@@ -125,10 +125,6 @@ def main():
     job_ids_tensor, actions_tensor, action_to_idx = numpy_to_torch(job_ids_array, actions_array)
 
     user_job_ids, user_actions = job_ids_tensor, actions_tensor
-
-    # Exemple d'historique d'un utilisateur
-    user_job_ids = [305, 299, 300, 290, 282, 274, 264, 261]
-    user_actions = ['view', 'view', 'view', 'view', 'view', 'view', 'view', 'view']
     
     # Vérifier la disponibilité du GPU
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
